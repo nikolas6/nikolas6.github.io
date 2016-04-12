@@ -1,0 +1,36 @@
+{
+  "extends": "google",
+  "plugins": [
+    "eslint-plugin-html",
+  ],
+  "rules": {
+    "no-console": 0,
+    "no-alert": 0,
+    "comma-dangle": 0,
+    "quotes": 0,
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "require-jsdoc": 0,
+    "max-len": 0,
+    "quote-props": 0,
+    "camelcase": 0,
+    "no-inline-comments": 0,
+    "no-negated-condition": 0,
+    "new-cap": 0,
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "Image": true,
+    "d3": true,
+    "Snap": true,
+    "_": true,
+    "createjs": true,
+    "TweenMax": true,
+    "Immutable": true,
+    "io": true,
+    "App": true,
+    "DEBUG": true,
+    "PUBSUB": true,
+    "SOCKET": true,
+  }
+}

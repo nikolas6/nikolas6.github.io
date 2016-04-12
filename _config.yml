@@ -6,22 +6,20 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Awesome Site Title
-email: your-email@domain.com
+title: Slacking Space
+email: nikolas@phoa.me
 description: >
-  Awesome site description here
-logo: "/assets/images/logo.jpg"
+  Learning something while slacking
+logo: "assets/images/logo.jpg"
+favicon: "assets/images/favicon.jpg"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://slacking.space" # the base hostname & protocol for your site
 paginate:	5 # The number of posts to show per page on your homepage
-
-name: 'Your Name'
+name: 'Nikolas'
 bio: >
-  Mea suas vituperatoribus et, virtute corpora quaestio cum ut.
-  Ne solet nostrum complectitur pri, vis ut inani populo.
-author_image: "/assets/images/author.jpg"
-twitter_username: jekyllrb
-github_username:  jekyll
+  Web Developer
+twitter_username: nikokin6
+github_username:  nikolas6
 
 # Build settings
 markdown: kramdown

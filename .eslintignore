@@ -1,0 +1,12 @@
+# Ignore build folder
+dist
+
+# ignore lib folder
+app/scripts/lib/
+app/scripts/utils.js
+
+# Ignore previous version
+**/**.v001.*
+
+# Ignore config stuff
+gulpfile.babel.js
