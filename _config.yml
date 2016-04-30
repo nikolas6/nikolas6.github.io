@@ -9,13 +9,13 @@
 title: Slacking Time
 email: nikolas@phoa.me
 description: >
-  Learning something while slacking
+  Learning & Slacking
 logo: "assets/images/logo.jpg"
 favicon: "assets/images/favicon.jpg"
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: "http://slackingtime.com" # the base hostname & protocol for your site
 paginate:	5 # The number of posts to show per page on your homepage
-name: 'Nikolas'
+name: 'Paul Nikolas Phoa'
 bio: >
   Web Developer
 twitter_username: nikokin6
