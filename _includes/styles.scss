@@ -116,6 +116,7 @@ a {
   @include respond-to(800) {
     padding: 0 $rs * 1;
   }
+  display: none;
 
   .page-links {
       display: block;
@@ -133,8 +134,13 @@ a {
       .page-link {
         // text-decoration: none;
         // border-bottom: 1px solid $color-main;
-        color: $color-main;
+        // color: $color-main;
+        color: $color-pink;
         margin-left: 0.5em;
+
+        &:hover {
+          border-color: $color-pink;
+        }
 
         &:first-child {
           margin-left: 0em;
@@ -150,6 +156,7 @@ a {
   margin: 0 auto;
   position: relative;
   padding: 0;
+  text-align: right;
   @include box-sizing(border-box);
 
   .blog-title {
@@ -169,7 +176,7 @@ a {
     padding: 0;
     line-height: 1.2;
     // color: #666666;
-    color: $color-base-darker-50;
+    color: $color-pink;
     font-weight: 300;
   }
 }
@@ -197,14 +204,16 @@ a {
       display: inline-block;
       width: 25%;
       height: 1px;
-      background: black;
-      opacity: 0.2;
+      background-color: $color-pink;
+      // background: black;
+      // opacity: 0.2;
     }
     &:last-child {
       // border-bottom: 0px;
     }
     p {
       color: $color-base-darker-50;
+      letter-spacing: 0.02em;
     }
     .post-title {
       letter-spacing: -0.02em;
@@ -219,10 +228,8 @@ a {
         // text-decoration: none;
         // color: #333332;
         color: $color-main;
-        // border-bottom: 2px solid $color-main;
-
         &:hover {
-          // text-decoration: none;
+          border-bottom: 2px solid $color-main;
         }
       }
     }
@@ -268,7 +275,9 @@ a {
 .pagination {
   text-align: center;
   padding: $rs * 1 0 0;
-  font-size: $rs / 4 * 3;
+  // font-size: $rs / 4 * 3;
+  font-size: em(14px, $rs);
+  color: $color-base-darker-50;
   a {
     color: #999999;
     text-decoration: none;
@@ -283,21 +292,20 @@ a {
   padding: $rs * 3 0;
   width: 100%;
   max-width: 700px;
-  font-size: $rs / 4 * 3;
+  // font-size: $rs / 4 * 3;
+  font-size: em(14px, $rs);
   text-align: left;
   color: #999999;
   line-height: $rs * 1.1;
   a {
-    color: #666666;
-    text-decoration: none;
-    &:hover {
-      color: #333333;
-    }
+    color: $color-main-darker-10;
   }
 
   .footer-copyright {
     display: inline-block;
     width: 100%;
+    color: $color-pink;
+    margin-top: 0.25em;
   }
 
   .footer-left {
@@ -544,7 +552,7 @@ a {
         line-height: 1.3;
         color: #999999;
         a {
-          color: #333333;
+          color: $color-main-darker-10;
           text-decoration: none;
           &:hover {
             text-decoration: underline;
