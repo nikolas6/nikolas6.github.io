@@ -13,6 +13,7 @@ $rs: 16px;
 
 $font-serif: "Roboto Condensed", Georgia, Cambria, "Times New Roman", Times, 'Lora', serif;
 $font-sans: "Roboto Condensed", "Helvetica Neue", 'Open Sans', Arial, Helvetica, sans-serif;
+$font-article: "Roboto", 'Open Sans', "Helvetica Neue", Arial, Helvetica, sans-serif;
 
 // ##### MIXIN #####
 
@@ -107,6 +108,10 @@ a {
 
 // ----- END OF DOM STYLE -----
 
+.topofpage {
+  display: none;
+}
+
 .site-header {
   position: relative;
   width: 100%;
@@ -116,7 +121,6 @@ a {
   @include respond-to(800) {
     padding: 0 $rs * 1;
   }
-  display: none;
 
   .page-links {
       display: block;
@@ -213,6 +217,8 @@ a {
     }
     p {
       color: $color-base-darker-50;
+      font-family: $font-article;
+      font-weight: 400;
       letter-spacing: 0.02em;
     }
     .post-title {
