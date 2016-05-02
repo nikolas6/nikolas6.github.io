@@ -5,8 +5,33 @@ $color-base: #f6f6f6;
 $color-base-darker-50: darken($color-base, 50%);
 $color-main: #3dbc93;
 $color-main-darker-10: darken($color-main, 5%);
+$color-pink: #e71c8c;
 
 $grey-color: #828282;
+
+$rs: 16px;
+
+$font-serif: "Roboto Condensed", Georgia, Cambria, "Times New Roman", Times, 'Lora', serif;
+$font-sans: "Roboto Condensed", "Helvetica Neue", 'Open Sans', Arial, Helvetica, sans-serif;
+
+// ##### MIXIN #####
+
+@mixin text-selection ($backgroundColor, $color) {
+  &::selection {
+    background-color: $backgroundColor; /* WebKit/Blink Browsers */
+    color: $color;
+  }
+  &::-moz-selection {
+    background-color: $backgroundColor; /* WebKit/Blink Browsers */
+    color: $color;
+  }
+  &::-webkit-selection {
+    background-color: $backgroundColor; /* WebKit/Blink Browsers */
+    color: $color;
+  }
+}
+
+// ----- END OF MIXIN -----
 
 .icon {
 
@@ -30,11 +55,6 @@ amp-img {
   @include clearfix;
 }
 
-$rs: 16px;
-
-$font-serif: Georgia,Cambria,"Times New Roman",Times,'Lora', serif;
-$font-sans: "Helvetica Neue", 'Open Sans', Arial, Helvetica, sans-serif;
-
 @mixin respond-to($breakpoint) {
   @media only screen and (max-width: $breakpoint + px) {
     @content;
@@ -45,6 +65,8 @@ $font-sans: "Helvetica Neue", 'Open Sans', Arial, Helvetica, sans-serif;
 %vertical-rhythm {
   margin-bottom: $rs;
 }
+
+// ##### DOM STYLE #####
 
 main {
   display: block;
@@ -64,6 +86,27 @@ body {
   font-feature-settings: "liga", "dlig";
 }
 
+h1, h2, h3, h4, h5, h6, div, p, time, a, span, section, nav {
+  @include text-selection($color-pink, white);
+}
+
+a {
+  text-decoration: none;
+  border-bottom: none;
+  border-bottom: 0px solid $color-main;
+
+  &:before {
+    content: "\00bb";
+    padding-right: 2px;
+  }
+  &:hover {
+    text-decoration: none;
+    border-bottom: 1px solid $color-main;
+  }
+}
+
+// ----- END OF DOM STYLE -----
+
 .site-header {
   position: relative;
   width: 100%;
@@ -79,18 +122,22 @@ body {
       // position: absolute;
       // top: 10px;
       // right: $rs;
-      font-weight: 200;
+      // font-weight: 200;
       font-style: normal;
       font-size: 18px;
       line-height: 30px;
       position: relative;
       text-align: right;
+      color: $color-pink;
 
-      a {
-        text-decoration: none;
-        color: #999999;
-        &:hover {
-          color: #333333;
+      .page-link {
+        // text-decoration: none;
+        // border-bottom: 1px solid $color-main;
+        color: $color-main;
+        margin-left: 0.5em;
+
+        &:first-child {
+          margin-left: 0em;
         }
       }
   }
@@ -169,29 +216,13 @@ body {
       margin: 0 0;
       a {
         position: relative;
-        text-decoration: none;
+        // text-decoration: none;
         // color: #333332;
         color: $color-main;
-
-        &:before,
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: -5px;
-          display: inline-block;
-          width: 50%;
-          height: 3px;
-          background-color: $color-main;
-        }
-        &:before {
-          right: 50%;
-        }
-        &:after {
-          left: 50%;
-        }
+        // border-bottom: 2px solid $color-main;
 
         &:hover {
-          text-decoration: none;
+          // text-decoration: none;
         }
       }
     }
@@ -209,9 +240,9 @@ body {
       line-height: 30px;
       a {
         color: #b3b3b1;
-        text-decoration: none;
+        // text-decoration: none;
         &:hover {
-          text-decoration: underline;
+          // text-decoration: underline;
         }
       }
     }
