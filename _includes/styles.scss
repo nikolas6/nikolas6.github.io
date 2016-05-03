@@ -217,6 +217,14 @@ a {
     &:last-child {
       // border-bottom: 0px;
     }
+
+    &.post-page {
+      padding-bottom: 40px;
+      &:after {
+        display: none;
+      }
+    }
+
     p {
       color: $color-base-darker-50;
       font-family: $font-article;
@@ -494,6 +502,9 @@ a {
         width: 100%;
         padding-bottom: $rs * 2;
       }
+      .hidden {
+        display: none;
+      }
       .author {
         padding-top: 20px;
         border-top: 1px solid $color-pink;
@@ -533,6 +544,10 @@ a {
       .user-social {
         display: inline-block;
         margin-right: 10px;
+
+        a:hover {
+          padding-bottom: 4px;
+        }
       }
       h4 {
         font-size: 18px;
@@ -560,10 +575,13 @@ a {
     .isRight {
       float: right;
       width: 47%;
-      display: none;
       @include box-sizing(border-box);
       @include respond-to(800) {
         width: 100%;
+      }
+
+      .hidden {
+        display: none;
       }
 
       .index-headline {
@@ -590,6 +608,16 @@ a {
           font-weight: 700;
           color: #333333;
         }
+      }
+      hr {
+        margin-top: 0;
+        margin-left: 85%;
+        margin-right: 0;
+      }
+      p {
+        text-align: right;
+        font-size: 14px;
+        color: #b3b3b1;
       }
     }
   }

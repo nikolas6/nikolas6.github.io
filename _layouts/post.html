@@ -4,7 +4,7 @@ layout: default
 {% include header.html %}
 
 <main class="content" role="main">
-  <article class="post">
+  <article class="post post-page">
     <div class="post-meta">
       <h1 class="post-title">{{ page.title }}</h1>
     </div>
@@ -42,14 +42,16 @@ layout: default
               {% endif %}
             </span>
           </p>
-          <hr>
-          <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
+          <hr class="hidden">
+          <p class="published hidden">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
         </section>
       </div>
       {{/post}}
       <div class="isRight">
-        <h5 class="index-headline featured"><span>Supported by</span></h5>
-        <footer class="site-footer">
+        <hr>
+        <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
+        <h5 class="index-headline featured hidden"><span>Supported by</span></h5>
+        <footer class="site-footer hidden">
           <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a> and <a href="https://github.com/ageitgey/amplify">Amplify</a></section>
           <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
           <div class="inner">
