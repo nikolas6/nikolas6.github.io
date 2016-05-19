@@ -88,8 +88,11 @@ body {
   font-feature-settings: "liga", "dlig";
 }
 
-h1, h2, h3, h4, h5, h6, div, p, time, a, span, section, nav {
+h1, h2, h3, h4, h5, h6, div, p, time, span, section, nav {
   @include text-selection($color-pink, white);
+}
+a {
+  @include text-selection($color-main, white);
 }
 
 a {
