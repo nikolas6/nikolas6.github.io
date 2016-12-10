@@ -1,2 +1,0 @@
-# Redirect to https with a 301
-/       https://slackingtime.com/:splat       200

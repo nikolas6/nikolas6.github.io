@@ -8,12 +8,11 @@
 # Site settings
 title: Slacking Time
 email: nikolas@phoa.me
-description: >
-  Learning Living Slacking
-logo: "assets/images/logo.jpg"
-favicon: "assets/images/favicon.jpg"
+description: Learning Living Slacking
+logo: "/assets/images/logo.jpg"
+favicon: "/assets/images/favicon.jpg"
 baseurl: "" # the subpath of your site, e.g. /blog
-# url: "http://slackingtime.com" # the base hostname & protocol for your site
+# url: "http://slacking.space" # the base hostname & protocol for your site
 paginate:	5 # The number of posts to show per page on your homepage
 name: 'Paul Nikolas Phoa'
 bio: >
@@ -30,5 +29,5 @@ kramdown:
 gems:
   - jekyll-paginate
 
-url: https://slackingtime.com   # with the https protocol
-enforce_ssl: slackingtime.com   # without any protocol
+url: https://slacking.space   # with the https protocol
+enforce_ssl: slacking.space   # without any protocol
